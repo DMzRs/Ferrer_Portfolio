@@ -265,7 +265,8 @@ section {
 .project-card:hover {
   background: var(--card-hover);
   border-color: var(--border-light);
-  transform: translateY(-3px);
+  transform: translateY(-6px) scale(1.12);
+  z-index: 10;
 }
 
 .project-card:hover .card-arrow {
@@ -400,6 +401,7 @@ section {
   font-size: .82rem;
   color: var(--text-muted);
   line-height: 1.65;
+  text-align: justify;
 }
 
 .card-arrow {
@@ -430,6 +432,7 @@ section {
   font-size: .95rem;
   line-height: 1.8;
   margin-bottom: 1.2rem;
+  text-align: justify;
 }
 
 .about-text p strong {
