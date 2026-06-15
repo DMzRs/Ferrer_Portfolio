@@ -173,6 +173,7 @@ nav.scrolled {
 .hero-photo {
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 
 .photo-frame {

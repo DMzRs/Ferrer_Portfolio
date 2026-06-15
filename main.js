@@ -1,14 +1,25 @@
-// ── Certificate Modal ──
+// ── Image Modal ──
 const certModal = document.getElementById('cert-modal');
 const certModalImg = document.getElementById('cert-modal-img');
+
+function openModal(src, alt) {
+  certModalImg.src = src;
+  certModalImg.alt = alt;
+  certModal.classList.add('open');
+}
 
 document.querySelectorAll('.cert-card').forEach(card => {
   card.addEventListener('click', () => {
     const fullSrc = card.getAttribute('data-cert-full');
     const img = card.querySelector('.cert-photo');
-    certModalImg.src = fullSrc || img.src;
-    certModalImg.alt = img.alt;
-    certModal.classList.add('open');
+    openModal(fullSrc || img.src, img.alt);
+  });
+});
+
+document.querySelectorAll('[data-modal-trigger]').forEach(el => {
+  el.addEventListener('click', () => {
+    const img = el.querySelector('img');
+    if (img) openModal(img.src, img.alt);
   });
 });
 
