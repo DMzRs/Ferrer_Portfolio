@@ -1,3 +1,27 @@
+// ── Certificate Modal ──
+const certModal = document.getElementById('cert-modal');
+const certModalImg = document.getElementById('cert-modal-img');
+
+document.querySelectorAll('.cert-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const fullSrc = card.getAttribute('data-cert-full');
+    const img = card.querySelector('.cert-photo');
+    certModalImg.src = fullSrc || img.src;
+    certModalImg.alt = img.alt;
+    certModal.classList.add('open');
+  });
+});
+
+certModal.addEventListener('click', e => {
+  if (e.target === certModal) {
+    certModal.classList.remove('open');
+  }
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') certModal.classList.remove('open');
+});
+
 // ── Navbar scroll style ──
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
