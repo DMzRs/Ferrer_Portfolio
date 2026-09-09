@@ -55,7 +55,7 @@
         </div>
       </div>
 
-      <div class="hero-photo reveal">
+      <div class="hero-photo reveal" data-modal-trigger>
         <div class="photo-frame">
           <img class="user-photo" src="Images/Ferrer Profile.jpg" alt="DM Rashid P. Ferrer">
         </div>
@@ -285,15 +285,15 @@
         </div>
         <div class="cert-grid stagger">
 
-          <div class="cert-card reveal">
+          <div class="cert-card reveal" data-cert-full="Images/ITS_Java_Full.png">
+            <img class="cert-photo" src="Images/ITS_Java.png" alt="ITS Java Certificate">
+          </div>
+          
+          <div class="cert-card reveal" data-cert-full="Images/ITS_Databases_Full.png">
             <img class="cert-photo" src="Images/ITS_Databases.png" alt="ITS Databases Certificate">
           </div>
 
-          <div class="cert-card reveal">
-            <img class="cert-photo" src="Images/ITS_Java.png" alt="ITS Java Certificate">
-          </div>
-
-          <div class="cert-card reveal">
+          <div class="cert-card reveal" data-cert-full="Images/ITS_Network_Security_Full.png">
             <img class="cert-photo" src="Images/ITS_Network_Security.png" alt="ITS Network Security Certificate">
           </div>
 
@@ -321,13 +321,6 @@
 
       <div class="contact-links reveal">
 
-        <a href="https://www.facebook.com/dm.ferrer05" class="contact-btn" target="_blank" rel="noopener noreferrer">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-          </svg>
-          Facebook
-        </a>
-
         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dmrashidpferrer@gmail.com" class="contact-btn" target="_blank" rel="noopener noreferrer">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <rect x="2" y="4" width="20" height="16" rx="2"/>
@@ -351,6 +344,10 @@
     </div>
   </div>
 </section>
+
+<div id="cert-modal" class="cert-modal">
+  <img class="cert-modal-content" id="cert-modal-img">
+</div>
 
 <script src="main.js"></script>
 </body>

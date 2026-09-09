@@ -1,3 +1,38 @@
+// ── Image Modal ──
+const certModal = document.getElementById('cert-modal');
+const certModalImg = document.getElementById('cert-modal-img');
+
+function openModal(src, alt) {
+  certModalImg.src = src;
+  certModalImg.alt = alt;
+  certModal.classList.add('open');
+}
+
+document.querySelectorAll('.cert-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const fullSrc = card.getAttribute('data-cert-full');
+    const img = card.querySelector('.cert-photo');
+    openModal(fullSrc || img.src, img.alt);
+  });
+});
+
+document.querySelectorAll('[data-modal-trigger]').forEach(el => {
+  el.addEventListener('click', () => {
+    const img = el.querySelector('img');
+    if (img) openModal(img.src, img.alt);
+  });
+});
+
+certModal.addEventListener('click', e => {
+  if (e.target === certModal) {
+    certModal.classList.remove('open');
+  }
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') certModal.classList.remove('open');
+});
+
 // ── Navbar scroll style ──
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
