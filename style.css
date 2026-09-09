@@ -414,6 +414,111 @@ section {
 }
 
 /* ═══════════════════════════════════════
+   EXPERIENCE
+═══════════════════════════════════════════ */
+#experience {
+  border-top: 1px solid var(--border);
+}
+
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.exp-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: background .3s, border-color .3s, transform .3s;
+}
+
+.exp-card:hover {
+  background: var(--card-hover);
+  border-color: var(--border-light);
+  transform: translateY(-4px);
+}
+
+.exp-body {
+  padding: 1.5rem 1.6rem 1.6rem;
+}
+
+.exp-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: .75rem;
+}
+
+.exp-role {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -.01em;
+}
+
+.exp-company {
+  color: var(--accent);
+  font-size: .88rem;
+  font-weight: 600;
+  margin-top: .15rem;
+}
+
+.exp-date {
+  font-size: .75rem;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: .35rem .75rem;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.exp-desc {
+  font-size: .9rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 1.1rem;
+  max-width: 640px;
+}
+
+.exp-focus {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .75rem;
+  margin-bottom: 1.2rem;
+}
+
+.exp-focus-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: .9rem 1rem;
+}
+
+.exp-focus-label {
+  display: block;
+  font-size: .68rem;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: .35rem;
+}
+
+.exp-focus-item p {
+  font-size: .84rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.exp-skills {
+  margin-top: .25rem;
+}
+
+/* ═══════════════════════════════════════
    ABOUT
 ═══════════════════════════════════════════ */
 #about {
@@ -632,14 +737,18 @@ section {
 
 @media (max-width: 600px) {
   .nav-links {
-    gap: 1.2rem;
+    gap: 1rem;
   }
 
   .nav-links a {
-    font-size: .8rem;
+    font-size: .75rem;
   }
 
   .works-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .exp-focus {
     grid-template-columns: 1fr;
   }
 
